@@ -44,6 +44,21 @@ export default {
             console.log('authResult', authResult)
             console.log('redirectUrl', redirectUrl)
             // Do what you wish with authResult... save to session, cookie, etc.
+
+/*             const auth = firebase_auth.getAuth()
+            firebase_auth.signInWithCredential(auth, authResult.credential).then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    // ...
+                    alert("You are succeeded to log in.");
+                    this.$router.push("/")
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(error.message)
+                }); */
+            this.$router.push("/")
         },
         // Note, bad credentials is not a sign-in failure
         signInAttempFailure(error) {

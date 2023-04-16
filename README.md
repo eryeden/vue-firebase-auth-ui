@@ -5,8 +5,7 @@ This repository aims to enhance UX while seamlessly integrating Firebase auth UI
 
 The project includes the following pages:
 - Top page
-- Signup page; This page is built upon the Firebase auth UI.
-- Sign-in page; This page is also built by the Firebase auth UI.
+- Login page: This page serves two functions - signing in and signing up.
 - User-specific dashboard
 
 

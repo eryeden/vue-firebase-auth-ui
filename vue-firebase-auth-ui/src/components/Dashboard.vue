@@ -16,6 +16,17 @@ export default {
     computed: {
     },
     methods: {
+        signOut() {
+            const auth = firebase_auth.getAuth();
+            firebase_auth.signOut(auth).then(() => {
+                // Sign-out successful.
+                alert("Signed out")
+                this.$router.push("/")
+            }).catch((error) => {
+                // An error happened.
+                alert("Failed to sign out: " + error.message)
+            });
+        }
     },
     watch: {
     },
@@ -52,4 +63,6 @@ export default {
     <h3>Email: {{ email }}</h3>
     <h3>IsVerified: {{ is_email_verified }}</h3>
     <br />
+    <br />
+    <button @click="signOut">Sign out</button>
 </template>
